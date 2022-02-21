@@ -31,7 +31,12 @@
 		</div>
 		<img class="header__logo" src="images/logo.svg" alt="logo">
 		<div class="header__right-corner">
-			<img class="header__cart" src="images/icon-cart.svg" alt="cart">
+			<div class="header__block">
+				<div class="header__badge header__badge--hidden">
+					<p class="badge__number">3</p>
+				</div>
+				<img class="header__cart" src="images/icon-cart.svg" alt="cart">
+			</div>
 			<img class="header__avatar" src="images/image-avatar.png" alt="avatar">
 		</div>
 
@@ -50,6 +55,38 @@
 			</div>
 			<div class="carousel__nav next">
 				<a><img class="nav2__item" src="images/icon-next.svg" alt="next"></a>
+			</div>
+			
+			
+			<div class="cartModal cartModal--hidden">
+				<p class="cart__heading">Cart</p>
+				<hr class="cart__divider">
+				<div class="cart__order">
+					
+					<p class="cart__status">Your cart is empty.</p>
+					
+					<div class=" order__block1 order__block1--hidden">
+						
+						<div class="order__data">
+							
+							<img class="order__img1" src="images/image-product-1-thumbnail.jpg" alt="image1">
+							
+							<div class="order__details">
+								<p class="order__name">Autumn Limited Edition...</p>
+								<span class="order__span1">$125.00 x 3</span>
+								<span class="order__span2"> $375.00</span>
+							</div>
+							
+							<img class="order__img2" src="images/icon-delete.svg" alt="delete">
+						</div>
+						
+						<button class="cart__button">
+							Checkout
+						</button>
+
+					</div>
+					
+				</div>
 			</div>
 
 		</div>
@@ -88,25 +125,6 @@
 		Coded by <a class="footer__a" href="#">Srijan Saini</a>.
 	</footer>
 
-	<div class="cartModal">
-		<p class="cart__heading">Cart</p>
-		<hr>
-		<p class="cart__status">Your cart is empty.</p>
-		<div class="cart__order">
-			<div class="order__data">
-				<img src="images/image-product-1-thumbnail.jpg" alt="image1">
-				<div class="order__details">
-					<p class="order__name">Autumn Limited Edition...</p>
-					<span class="order__span1">$125.00 x 3</span>
-					<span class="order__span2"> $375.00</span>
-				</div>
-				<img class="" src="images/icon-delete.svg" alt="delete">
-			</div>
-			<button class="cart__button">
-				Checkout
-			</button>
-		</div>
-	</div>
 	<script src="index.js"></script>
 </body>
 

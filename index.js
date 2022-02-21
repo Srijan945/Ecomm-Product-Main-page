@@ -54,5 +54,33 @@ for(let i=0;i<operators.length;i++){
 
 //Cart Functionality
 document.querySelector(".header__cart").addEventListener("click",function(){
-    
+    document.querySelector(".cartModal").classList.toggle("cartModal--hidden");
 });
+
+//Button cart Relation
+
+document.querySelector(".button").addEventListener("click",function(){
+    
+    const orderQuantity = Number(document.querySelector(".flexbox2__span").textContent);
+    
+    if(orderQuantity > 0){
+
+        document.querySelector(".header__badge").classList.remove("header__badge--hidden");
+        document.querySelector(".badge__number").textContent = orderQuantity;
+        document.querySelector(".cart__status").classList.add("cart__status--hidden");
+        document.querySelector(".order__block1").classList.remove("order__block1--hidden");
+        document.querySelector(".order__span1").textContent = "$125.00 x " + orderQuantity.toString();
+        document.querySelector(".order__span2").textContent = "$" + 125*orderQuantity + ".00";
+    }
+});
+
+document.querySelector(".order__img2").addEventListener("click",function(){
+    
+    document.querySelector(".header__badge").classList.add("header__badge--hidden");
+    document.querySelector(".flexbox2__span").textContent = 0;
+    document.querySelector(".cart__status").classList.remove("cart__status--hidden");
+    document.querySelector(".order__block1").classList.add("order__block1--hidden");
+});
+
+
+
