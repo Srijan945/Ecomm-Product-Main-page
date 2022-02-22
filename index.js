@@ -1,8 +1,21 @@
 let imageNum = 0;
+let lightboxImageNum = 0;
 const carouselImages = document.getElementsByClassName("carousel__image");
-
+const carouselThumbnailImages = document.querySelectorAll(".carousel__thumbnailImage");
+const lightboxImages = document.querySelectorAll(".lightbox__image");
+const lightboxThumbnailImages = document.querySelectorAll(".lightbox__thumbnailImage");
 
 // Carousel functioning
+function carouselThumbnail(){
+
+    for(let i=0;i<carouselThumbnailImages.length;i++)
+    {
+        carouselThumbnailImages[i].classList.remove("thumbnailImage__clicked");
+        if(i === imageNum){
+            carouselThumbnailImages[i].classList.add("thumbnailImage__clicked");
+        }
+    }  
+}
 function carousel(){
     
     for(let i=0;i<carouselImages.length;i++){
@@ -24,6 +37,18 @@ document.querySelector(".next").addEventListener("click",function(){
     imageNum = (imageNum+1 > 3 ? 0 : imageNum+1);
     carousel();
 });
+
+// Carousel Thumbnail
+for(let i=0;i<carouselThumbnailImages.length;i++)
+{
+    carouselThumbnailImages[i].addEventListener("click",function(){
+        imageNum = i;
+        carousel();
+        carouselThumbnail();
+        document.querySelector(".lightbox__parent").classList.remove("lightbox__parent--hidden");
+        document.querySelector(".lightbox").classList.remove("lightbox--hidden");
+    });
+}
 
 // Menu Modal Functionality
 document.querySelector(".header__menu").addEventListener("click",function(){
@@ -81,14 +106,10 @@ document.querySelector(".order__img2").addEventListener("click",function(){
     document.querySelector(".flexbox2__span").textContent = 0;
     document.querySelector(".cart__status").classList.remove("cart__status--hidden");
     document.querySelector(".order__block1").classList.add("order__block1--hidden");
+    document.querySelector(".cartModal").classList.add("cartModal--hidden");
 });
 
 //Lightbox carousel
-
-const lightboxImages = document.querySelectorAll(".lightbox__image");
-const lightboxThumbnailImages = document.querySelectorAll(".lightbox__thumbnailImage");
-let lightboxImageNum = 0;
-
 function lightboxThumbnail(){
 
     for(let i=0;i<lightboxThumbnailImages.length;i++)
@@ -132,6 +153,36 @@ for(let i=0;i<lightboxThumbnailImages.length;i++)
         lightboxCarousel();
     });
 }
+
+//Lightbox Close Button
+document.querySelector(".lightbox__close").addEventListener("click",function(){
+    document.querySelector(".lightbox__parent").classList.add("lightbox__parent--hidden");
+    document.querySelector(".lightbox").classList.add("lightbox--hidden");
+    imageNum = lightboxImageNum;
+    carousel();
+    carouselThumbnail();
+});
+
+
+
+//Media Queries
+
+const media = window.matchMedia("(max-width: 999px)");
+media.addEventListener("change",function(){
+    if(media.matches){
+        document.querySelector(".lightbox__parent").classList.add("lightbox__parent--hidden");
+        document.querySelector(".lightbox").classList.add("lightbox--hidden");
+        imageNum = lightboxImageNum;
+        carousel();
+        carouselThumbnail();
+    }
+    else{
+        carousel();
+        carouselThumbnail();
+    }
+});
+
+
 
 
 

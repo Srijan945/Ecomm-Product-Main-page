@@ -350,7 +350,12 @@ html {
     font-weight: 700;
     text-decoration: none;
 }
-
+div.lightbox--hidden{
+    display: none;
+}
+.lightbox__parent--hidden{
+    display: none;
+}
 @media only screen and (min-width: 600px){
     
     .col-md-1{ width: 8.33%;}
@@ -387,7 +392,6 @@ html {
     .cartModal{
         top: 6.25rem;   
     }
-
 }
 
 @media only screen and (min-width: 1000px){
@@ -413,6 +417,7 @@ html {
     .header__logo{
         margin-left: 0;
         margin-right: 2rem;
+        cursor: pointer;
     }
     .header__nav{
         display: block;
@@ -489,25 +494,24 @@ html {
         background-color: black;
         opacity: 0.75;
     }
-    .lightbox__parent--hidden{
-        display: none;
-    }
+    
     .lightbox{
         display: inline; 
-        position: relative;
+        position: absolute;
         top: 20vh;
         left: 35vw;  
     }
+    
     .lightbox__close{
         display: block;
         cursor: pointer;
         margin-bottom: 1rem;
         filter: brightness(4);
         position: relative;
-        left: 24%;
+        left: 24vw;
     }
     .lightbox__image{
-        width: 25%;
+        width: 25vw;
         border-radius: 0.625rem;
     }
     .lightbox__image--hidden{
@@ -543,7 +547,7 @@ html {
     /******** Lightbox Flexbox *********/
 
     .lightbox__flexbox{
-        width: 25%;
+        width: 25vw;
         margin-top: 1rem;
         display: flex;
         flex-direction: row;
