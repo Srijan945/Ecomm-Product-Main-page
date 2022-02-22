@@ -1,8 +1,10 @@
 let imageNum = 0;
 let lightboxImageNum = 0;
 const carouselImages = document.getElementsByClassName("carousel__image");
+const carouselFlexboxContainer = document.querySelectorAll(".flexbox__container");
 const carouselThumbnailImages = document.querySelectorAll(".carousel__thumbnailImage");
 const lightboxImages = document.querySelectorAll(".lightbox__image");
+const lightboxFlexboxContainer = document.querySelectorAll(".lightboxFlexbox__container");
 const lightboxThumbnailImages = document.querySelectorAll(".lightbox__thumbnailImage");
 
 // Carousel functioning
@@ -11,8 +13,10 @@ function carouselThumbnail(){
     for(let i=0;i<carouselThumbnailImages.length;i++)
     {
         carouselThumbnailImages[i].classList.remove("thumbnailImage__clicked");
+        carouselFlexboxContainer[i].classList.remove("thumbnailContainer__clicked");
         if(i === imageNum){
             carouselThumbnailImages[i].classList.add("thumbnailImage__clicked");
+            carouselFlexboxContainer[i].classList.add("thumbnailContainer__clicked");
         }
     }  
 }
@@ -28,6 +32,7 @@ function carousel(){
 }
 
 carousel();
+carouselThumbnail();
 document.querySelector(".prev").addEventListener("click",function(){
     imageNum = (imageNum-1 < 0 ? 3 : imageNum-1);
     carousel();
@@ -115,8 +120,10 @@ function lightboxThumbnail(){
     for(let i=0;i<lightboxThumbnailImages.length;i++)
     {
         lightboxThumbnailImages[i].classList.remove("thumbnailImage__clicked");
+        lightboxFlexboxContainer[i].classList.remove("thumbnailContainer__clicked");
         if(i === lightboxImageNum){
             lightboxThumbnailImages[i].classList.add("thumbnailImage__clicked");
+            lightboxFlexboxContainer[i].classList.add("thumbnailContainer__clicked");
         }
     }  
 }

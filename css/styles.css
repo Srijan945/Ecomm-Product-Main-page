@@ -312,6 +312,10 @@ html {
     height: 3.5rem;
     border-radius: 0.3125rem;
 }
+.order__img2:hover{
+    cursor: pointer;
+    filter: brightness(0);
+}
 .order__name{
     margin: 0 0 0.625rem 0;
     font-weight: 400;
@@ -411,6 +415,9 @@ div.lightbox--hidden{
     .col-lg-11{ width: 91.63%;}
     .col-lg-12{ width: 100%;}
 
+    .header{
+        padding: 5vh 0;
+    }
     .header__menu{
         display: none;
     }
@@ -427,10 +434,13 @@ div.lightbox--hidden{
         font-size: 1rem;
         font-weight: 400;
         color: hsl(219, 9%, 45%);
+        padding-bottom: calc(5vh + 0.7rem);
     }
     .nav3__item:hover{
         color: hsl(220, 13%, 13%);
         cursor: pointer;
+        border-bottom: 0.1875rem solid hsl(26, 100%, 55%);
+
     }
     .main{
         display: flex;
@@ -449,17 +459,24 @@ div.lightbox--hidden{
         justify-content: space-between;        
     }
     .carousel__thumbnailImage{
-        width: 20.825%;
+        width: 100%;
+        height: 100%;
         border-radius: 0.625rem;
+    }
+    .flexbox__container{
+        width: 20.8%;
+        border-radius: 0.75rem;
     }
     .carousel__thumbnailImage:hover{
         cursor: pointer;
         opacity: 0.4;
         transition: opacity 0.5s;
     }
+    .thumbnailContainer__clicked{
+        border: 0.1875rem solid hsl(26, 100%, 55%);
+    }
     .thumbnailImage__clicked{
-        opacity: 0.4;
-        border: 0.125rem solid hsl(26, 100%, 55%);
+       opacity: 0.4;
     }
     .main__section{
         padding-top: 4%;
@@ -510,6 +527,9 @@ div.lightbox--hidden{
         position: relative;
         left: 24vw;
     }
+    .lightbox__close:hover{
+        filter: grayscale(100%) brightness(70%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    }
     .lightbox__image{
         width: 25vw;
         border-radius: 0.625rem;
@@ -517,7 +537,6 @@ div.lightbox--hidden{
     .lightbox__image--hidden{
         display: none;
     }
-
     /******* Lightbox Nav *********/
     .lightbox__nav{
         width: 2.5rem;
@@ -537,6 +556,9 @@ div.lightbox--hidden{
         width: 0.625rem;
         height: 1rem;
     }
+    .nav4__item:hover{
+        filter: grayscale(100%) brightness(90%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    }
     .lightbox__prev{
         left: -1.25rem;
     }
@@ -553,10 +575,15 @@ div.lightbox--hidden{
         flex-direction: row;
         justify-content: center;
     }
+    .lightboxFlexbox__container{
+        width: 20%;
+        margin-left: 3%;
+        border-radius: 0.75rem;
+    }
     .lightbox__thumbnailImage{
-        width: 15%;
+        width: 100%;
+        height: 100%;
         border-radius: 0.625rem;
-        margin-left: 5%;
     }
     .lightbox__thumbnailImage:hover{
         cursor: pointer;
