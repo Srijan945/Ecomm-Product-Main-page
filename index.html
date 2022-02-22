@@ -30,6 +30,13 @@
 			<img class="menu__img" src="images/icon-menu.svg" alt="menu">
 		</div>
 		<img class="header__logo" src="images/logo.svg" alt="logo">
+		<div class="header__nav">
+			<span class="nav3__item">Collections</span>
+			<span class="nav3__item">Men</span>
+			<span class="nav3__item">Women</span>
+			<span class="nav3__item">About</span>
+			<span class="nav3__item">Contact</span>
+		</div>
 		<div class="header__right-corner">
 			<div class="header__block">
 				<div class="header__badge header__badge--hidden">
@@ -42,88 +49,127 @@
 
 	</header>
 
+	<hr class="divider">
 	<main class="main">
 
-		<div class="carousel">
+		<div class="carousel col-lg-5">
 			
 			<img class="carousel__image" src="images/image-product-1.jpg" alt="shoe-image1">
 			<img class="carousel__image" src="images/image-product-2.jpg" alt="shoe-image2">
 			<img class="carousel__image" src="images/image-product-3.jpg" alt="shoe-image3">
 			<img class="carousel__image" src="images/image-product-4.jpg" alt="shoe-image4">
+			
+			<div class="carousel__flexbox">
+				<img class="carousel__thumbnailImage" src="images/image-product-1-thumbnail.jpg" alt="shoe-thumbnailImage1">
+				<img class="carousel__thumbnailImage" src="images/image-product-2-thumbnail.jpg" alt="shoe-thumbnailImage2">
+				<img class="carousel__thumbnailImage" src="images/image-product-3-thumbnail.jpg" alt="shoe-thumbnailImage3">
+				<img class="carousel__thumbnailImage" src="images/image-product-4-thumbnail.jpg" alt="shoe-thumbnailImage4">
+			</div>
+			
 			<div class="carousel__nav prev">
 				<a><img class="nav2__item" src="images/icon-previous.svg" alt="previous"></a>
 			</div>
 			<div class="carousel__nav next">
 				<a><img class="nav2__item" src="images/icon-next.svg" alt="next"></a>
 			</div>
-			
-			
-			<div class="cartModal cartModal--hidden">
-				<p class="cart__heading">Cart</p>
-				<hr class="cart__divider">
-				<div class="cart__order">
-					
-					<p class="cart__status">Your cart is empty.</p>
-					
-					<div class=" order__block1 order__block1--hidden">
-						
-						<div class="order__data">
-							
-							<img class="order__img1" src="images/image-product-1-thumbnail.jpg" alt="image1">
-							
-							<div class="order__details">
-								<p class="order__name">Autumn Limited Edition...</p>
-								<span class="order__span1">$125.00 x 3</span>
-								<span class="order__span2"> $375.00</span>
-							</div>
-							
-							<img class="order__img2" src="images/icon-delete.svg" alt="delete">
-						</div>
-						
-						<button class="cart__button">
-							Checkout
-						</button>
-
-					</div>
-					
-				</div>
-			</div>
 
 		</div>
 
-		<section class="main__section">
+		<section class="main__section col-lg-6">
 			
 			<p class="section__p1">SNEAKER COMPANY<p>
-			<h2 class="section__h1">Fall Limited Edition Sneakers</h2>
+			<h1 class="section__h1">Fall Limited Edition Sneakers</h1>
 			<p class="section__p2">
 				These low-profile sneakers are your perfect casual wear companion. Featuring a
 				durable rubber outer sole, they'll withstand everything the weather can offer.
 			</p>
 			<div class="section__flexbox1">
-				<h2 class="flexbox1__h2">$125.00</h2>
-				<span class="flexbox1__span1">50%</span>
+				<div class="flexbox1__flexbox">
+					<h2 class="flexbox1__h2">$125.00</h2>
+					<span class="flexbox1__span1">50%</span>
+				</div>
 				<span class="flexbox1__span2">$250.00</span>
 			</div>
 			
-			<div class="section__flexbox2">
-				<img class="flexbox2__img" src="images/icon-minus.svg" alt="minus-icon">
-				<span class="flexbox2__span">0</span>
-				<img class="flexbox2__img" src="images/icon-plus.svg" alt="plus-icon">
+			<div class="section__flexbox3">
+				<div class="section__flexbox2 col-lg-45">
+					<img class="flexbox2__img" src="images/icon-minus.svg" alt="minus-icon">
+					<span class="flexbox2__span">0</span>
+					<img class="flexbox2__img" src="images/icon-plus.svg" alt="plus-icon">
+				</div>
+				
+				<button class="button col-lg-7">
+					<img class="button__cart" src="images/icon-cart.svg" alt="cart">
+					<span class="button__span">Add to cart</span>
+				</button>
 			</div>
 			
-			<button class="button">
-				<img class="button__cart" src="images/icon-cart.svg" alt="cart">
-				<span class="button__span">Add to cart</span>
-			</button>
 		</section>
 		
 	</main>
-
 
 	<footer class="footer">
 		Challenge by <a class="footer__a" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a class="footer__a" href="#">Srijan Saini</a>.
 	</footer>
+
+	<div class="cartModal cartModal--hidden">
+		<p class="cart__heading">Cart</p>
+		<hr class="cart__divider">
+		<div class="cart__order">
+			
+			<p class="cart__status">Your cart is empty.</p>
+			
+			<div class=" order__block1 order__block1--hidden">
+				
+				<div class="order__data">
+					
+					<img class="order__img1" src="images/image-product-1-thumbnail.jpg" alt="image1">
+					
+					<div class="order__details">
+						<p class="order__name">Autumn Limited Edition...</p>
+						<span class="order__span1">$125.00 x 3</span>
+						<span class="order__span2"> $375.00</span>
+					</div>
+					
+					<img class="order__img2" src="images/icon-delete.svg" alt="delete">
+				</div>
+				
+				<button class="cart__button">
+					Checkout
+				</button>
+
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="lightbox__parent lightbox__parent--hidden">
+		<div class="lightbox">
+			
+			<img class="lightbox__close" src="images/icon-close.svg" alt="delete">	
+			<img class="lightbox__image" src="images/image-product-1.jpg" alt="shoe-image1">
+			<img class="lightbox__image" src="images/image-product-2.jpg" alt="shoe-image2">
+			<img class="lightbox__image" src="images/image-product-3.jpg" alt="shoe-image3">
+			<img class="lightbox__image" src="images/image-product-4.jpg" alt="shoe-image4">
+			
+			<div class="lightbox__nav lightbox__prev">
+				<a><img class="nav4__item" src="images/icon-previous.svg" alt="previous"></a>
+			</div>
+			<div class="lightbox__nav lightbox__next">
+				<a><img class="nav4__item" src="images/icon-next.svg" alt="next"></a>
+			</div>
+
+			<div class="lightbox__flexbox">
+				<img class="lightbox__thumbnailImage" src="images/image-product-1-thumbnail.jpg" alt="shoe-thumbnailImage1">
+				<img class="lightbox__thumbnailImage" src="images/image-product-2-thumbnail.jpg" alt="shoe-thumbnailImage2">
+				<img class="lightbox__thumbnailImage" src="images/image-product-3-thumbnail.jpg" alt="shoe-thumbnailImage3">
+				<img class="lightbox__thumbnailImage" src="images/image-product-4-thumbnail.jpg" alt="shoe-thumbnailImage4">
+			</div>
+			
+		</div>
+	</div>
+	
 
 	<script src="index.js"></script>
 </body>
