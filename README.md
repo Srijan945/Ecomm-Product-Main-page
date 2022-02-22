@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 
 ### Links
@@ -46,5 +46,5 @@ Users should be able to:
 
 ## Author
 
-- Name - [Srijan Saini](https://github.com/Srijan945/Ecomm-Product-Main-page)
+- Name - [Srijan Saini](#)
 
